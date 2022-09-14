@@ -1,0 +1,97 @@
+body{
+    background-color: black;
+}
+
+.getReadyBox{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.getReady{
+    font-size: 225px;
+    margin-top: 30px;
+    color: white;
+}
+
+.underText{
+    z-index: 0;
+    color: white;
+    opacity: 0;
+}
+
+.slideImage{
+    width: 320px;
+    height: inherit;
+    border-radius: 9px;
+}
+
+.imageBox{
+    width: 400px;
+}
+
+.image1{
+    position: relative;
+    z-index: 2;
+}
+
+.image2{
+    position: relative;
+    z-index: 5;
+    transform: matrix(1, 0, 0, 1, 50, -390);
+}
+
+.image3{
+    position: relative;
+    z-index: 6;
+    transform: matrix(1, 0, 0, 1, -50, -740);
+}
+
+.image4{
+    position: relative; 
+    z-index: 4;
+    transform: matrix(1, 0, 0, 1, -100, -1280);
+}
+
+.hidden{
+    display: none;
+}
+
+.imageShow{
+    width: 0px;
+    height: 1500px;
+    transform: matrix(1, 0, 0, 1, -400, 0);
+}
+
+.ready{
+    width: 500px;
+    transform: matrix(1, 0, 0, 1, -550, -200);
+}
+
+.readyARText{
+    opacity: 0;
+    color: white;
+    font-size: 70px;
+}
+
+.animationADD{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    height: 1800px;
+}
+
+.changeOpacity{
+    animation-name: changeOpacity;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes changeOpacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
