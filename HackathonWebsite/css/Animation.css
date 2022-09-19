@@ -87,6 +87,7 @@ body{
     height: 1800px;
 }
 
+
 .changeOpacityNormal{
     animation-name: changeOpacity;
     animation-duration: 1s;

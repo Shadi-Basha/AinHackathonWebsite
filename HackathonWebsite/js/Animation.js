@@ -7,12 +7,13 @@ const readyAR = document.getElementsByClassName("readyARText");
 const getReady = document.getElementsByClassName("getReady");
 const myCard = document.getElementsByClassName("cardInner");
 
+
 window.onscroll = (event) => {
-    var scroll = window.pageYOffset;
+    let scroll = window.pageYOffset;
     let width = window.innerWidth;
     let newScroll = scroll - 0;
-    console.log("Y : " + scroll);
-    console.log("width: " + width);
+    // console.log("Y : " + scroll);
+    // console.log("width: " + width);
     const body = document.getElementsByTagName('body')[0];
 
     if (scroll > 300) {
@@ -67,7 +68,7 @@ window.onscroll = (event) => {
             // img3[0].lastElementChild.classList.remove("hidden");
             if (width > 1200)
                 img3[0].style.transform = "matrix(" + (1 + 500 * 0.0007) + ",0,0," + (1 + 500 * 0.0007) + "," + (-500 * .29 - 50) + "," + (1.01 * 500 - 740) + ")";
-            else if (width < 1200 && width > 770){
+            else if (width < 1200 && width > 770) {
                 img3[0].style.transform = "matrix(" + (1 + 500 * 0.0003) + ",0,0," + (1 + 500 * 0.0003) + "," + (-500 * .25 - 50) + "," + (0.72 * 500 - 600) + ")";
                 readyAR[0].classList.add("changeOpacityNormal");
             }
@@ -77,16 +78,16 @@ window.onscroll = (event) => {
         if (newScroll < 600) {
             if (width > 1200)
                 img4[0].style.transform = "matrix(" + (1 + newScroll * 0.0003) + ",0,0," + (1 + newScroll * 0.0003) + "," + (newScroll * .6 - 100) + "," + (1.25 * newScroll - 1280) + ")";
-            else if(width < 1200 && width > 770)
+            else if (width < 1200 && width > 770)
                 img4[0].style.transform = "matrix(" + (1 + newScroll * 0.00015) + ",0,0," + (1 + newScroll * 0.00015) + "," + (newScroll * .40 - 100) + "," + (0.92 * newScroll - 1020) + ")";
 
-                // img4[0].lastElementChild.classList.add("hidden");
+            // img4[0].lastElementChild.classList.add("hidden");
         }
         if (newScroll > 700) {
             // img4[0].lastElementChild.classList.remove("hidden");
             if (width > 1200)
                 img4[0].style.transform = "matrix(" + (1 + 600 * 0.0003) + ",0,0," + (1 + 600 * 0.0003) + "," + (600 * .6 - 100) + "," + (1.25 * 600 - 1280) + ")";
-            else if(width < 1200 && width > 770)
+            else if (width < 1200 && width > 770)
                 img4[0].style.transform = "matrix(" + (1 + 600 * 0.00015) + ",0,0," + (1 + 600 * 0.00015) + "," + (600 * .40 - 100) + "," + (0.92 * 600 - 1020) + ")";
             img4[0].lastElementChild.classList.add("changeOpacityNormal");
         }
@@ -119,19 +120,53 @@ window.onscroll = (event) => {
 // };
 
 
-const challengesAnimation = ()=>{
-    myCard[0].classList.toggle('is-flipped');
+const countDownDateChallenge1 = new Date("sep 19, 2022 18:30:00").getTime();
+const countDownDateChallenge2 = new Date("sep 20, 2022 18:50:00").getTime();
+const countDownDateChallenge3 = new Date("sep 19, 2022 18:50:00").getTime();
+
+
+const reveling = (index) => {
+    myCard[index].classList.add('is-flipped');
 };
 
 
-var countDownDateChallenge1 = new Date("sep 16, 2022 13:50:00").getTime();
-var countDownDateChallenge2 = new Date("sep 19, 2022 00:00:00").getTime();
-var countDownDateChallenge3 = new Date("sep 16, 2022 01:50:00").getTime();
+let timeFormating = (time, elementName,index) => {
 
-let reveling = (num)=>{
-    
+    const element = document.getElementById(elementName);
 
+    let currentTime = new Date().getTime();
+    let distance = time - currentTime;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    let countDown;
+
+    if (days > 0)
+        countDown = days + "d  " + hours + "h";
+    else if (hours > 0)
+        countDown = hours + "h  " + minutes + "m";
+    else if (minutes > 0)
+        countDown = minutes + "m  " + seconds + "s";
+    else
+        countDown = seconds + "s";
+
+    // element.innerHTML = countDown;
+    // console.log(countDown);
+
+
+    if (distance < 0) {
+        element.innerText = "";
+        reveling(index);
+    } else
+        element.innerText = countDown;
 };
+let challenge1TimerInterval;
+challenge1TimerInterval = setInterval(timeFormating, 1000,countDownDateChallenge1,"challenge1Timer",0);
+challenge1TimerInterval = setInterval(timeFormating, 1000,countDownDateChallenge2,"challenge2Timer",1);
+
 
 // myCard[0].addEventListener("click", function (e) {
 //     myCard[0].classList.toggle('is-flipped');
@@ -141,22 +176,22 @@ let reveling = (num)=>{
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("oct 10, 2022 00:00:00").getTime();
+const countDownDate = new Date("oct 10, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function () {
+let x = setInterval(function () {
 
     // Get today's date and time
-    var now = new Date().getTime();
+    let now = new Date().getTime();
 
     // Find the distance between now and the count down date
-    var distance = countDownDate - now;
+    let distance = countDownDate - now;
 
     // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
     document.getElementById("demo").innerHTML = "  " + "    " + days + "d  " + hours + "h  "
