@@ -5,7 +5,7 @@ const img3 = document.getElementsByClassName("image3");
 const img4 = document.getElementsByClassName("image4");
 const readyAR = document.getElementsByClassName("readyARText");
 const getReady = document.getElementsByClassName("getReady");
-const card = document.getElementsByClassName("cardInner");
+const myCard = document.getElementsByClassName("cardInner");
 
 window.onscroll = (event) => {
     var scroll = window.pageYOffset;
@@ -105,6 +105,9 @@ window.onscroll = (event) => {
     }
 };
 
+
+
+
 // const goBlack = () => {
 //     const body = document.getElementsByTagName('body')[0];
 //     body.style.backgroundColor = 'black';
@@ -115,6 +118,56 @@ window.onscroll = (event) => {
 //     window.scrollTo(0, 0);
 // };
 
-// card[0].addEventListener("click", function (e) {
-//     card[0].classList.toggle('is-flipped');
+
+const challengesAnimation = ()=>{
+    myCard[0].classList.toggle('is-flipped');
+};
+
+
+var countDownDateChallenge1 = new Date("sep 16, 2022 13:50:00").getTime();
+var countDownDateChallenge2 = new Date("sep 19, 2022 00:00:00").getTime();
+var countDownDateChallenge3 = new Date("sep 16, 2022 01:50:00").getTime();
+
+let reveling = (num)=>{
+    
+
+};
+
+// myCard[0].addEventListener("click", function (e) {
+//     myCard[0].classList.toggle('is-flipped');
 // });
+
+
+
+
+// Set the date we're counting down to
+var countDownDate = new Date("oct 10, 2022 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function () {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = "  " + "    " + days + "d  " + hours + "h  "
+        + minutes + "m  " + seconds + "s  " + "    " + "    ";
+
+    // If the count down is finished, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "انتهى التسجل";
+    }
+}, 1000);
+
+
+

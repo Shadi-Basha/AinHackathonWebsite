@@ -24,6 +24,7 @@ body{
     opacity: 0;
 }
 
+
 .slideImage{
     width: 320px;
     height: inherit;
@@ -78,6 +79,7 @@ body{
     font-size: 70px;
 }
 
+
 .animationADD{
     margin-left: auto;
     margin-right: auto;
@@ -87,25 +89,25 @@ body{
 
 .changeOpacityNormal{
     animation-name: changeOpacity;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards; 
 }
 
 .changeOpacityFast{
     animation-name: changeOpacity;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards; 
-    animation-delay: 0.75s;
+    animation-delay: 0.5s;
 }
 
 .changeOpacitySlow{
     animation-name: changeOpacity;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards; 
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
 @keyframes changeOpacity {
