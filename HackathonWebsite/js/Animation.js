@@ -6,13 +6,15 @@ const img4 = document.getElementsByClassName("image4");
 const readyAR = document.getElementsByClassName("readyARText");
 const getReady = document.getElementsByClassName("getReady");
 const myCard = document.getElementsByClassName("cardInner");
+let reveled = -1;
+let pastI = -1;
 
 
 window.onscroll = (event) => {
     let scroll = window.pageYOffset;
     let width = window.innerWidth;
-    let newScroll = scroll - 0;
-    // console.log("Y : " + scroll);
+    let newScroll = scroll - 635;
+    console.log("Y : " + scroll);
     // console.log("width: " + width);
     const body = document.getElementsByTagName('body')[0];
 
@@ -20,6 +22,20 @@ window.onscroll = (event) => {
         getReady[0].children[0].classList.add("changeOpacityNormal");
         getReady[0].children[1].classList.add("changeOpacitySlow");
         getReady[0].children[2].classList.add("changeOpacityFast");
+    }
+
+    if(newScroll == 0){
+        if (width > 1200){
+            img1[0].style.transform = "matrix(1,0,0,1,0,0)";
+            img2[0].style.transform = "matrix(1, 0, 0, 1, 50, -390)";
+            img3[0].style.transform = "matrix(1, 0, 0, 1, -50, -740)";
+            img4[0].style.transform = "matrix(1, 0, 0, 1, -100, -1280)";
+        }else if (width < 1200 && width > 770){
+            img1[0].style.transform = "matrix(1,0,0,1,0,0)";
+            img2[0].style.transform = "matrix(1, 0, 0, 1, 50, -320)";
+            img3[0].style.transform = "matrix(1, 0, 0, 1, -50, -600)";
+            img4[0].style.transform = "matrix(1, 0, 0, 1, -100, -1020)";
+        }
     }
 
     if (newScroll > 0) {
@@ -97,10 +113,21 @@ window.onscroll = (event) => {
         }
 
 
-        if (newScroll > 3000) {
-            body.style.backgroundColor = 'white';
-        } else {
-            body.style.backgroundColor = 'black';
+        // if (newScroll > 3000) {
+        //     body.style.backgroundColor = 'white';
+        // } else {
+        //     body.style.backgroundColor = 'black';
+        // }
+
+        if(scroll > 1900){
+            if(reveled != pastI){
+                // console.log("this is current index " +reveled);
+                for (let i = 0; i <= reveled; i++){
+                    reveling(i);
+                }
+                pastI = reveled;
+            }
+            
         }
 
     }
@@ -120,12 +147,26 @@ window.onscroll = (event) => {
 // };
 
 
-const countDownDateChallenge1 = new Date("sep 19, 2022 18:30:00").getTime();
-const countDownDateChallenge2 = new Date("sep 20, 2022 18:50:00").getTime();
-const countDownDateChallenge3 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge1 = new Date("sep 18, 2022 21:16:00").getTime();
+const countDownDateChallenge2 = new Date("sep 19, 2022 23:50:00").getTime();
+const countDownDateChallenge3 = new Date("sep 19, 2022 23:50:00").getTime();
+const countDownDateChallenge4 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge5 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge6 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge7 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge8 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge9 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge10 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge11 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge12 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge13 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge14 = new Date("sep 19, 2022 18:50:00").getTime();
+const countDownDateChallenge15 = new Date("sep 19, 2022 18:50:00").getTime();
+
 
 
 const reveling = (index) => {
+    myCard[index].style.transitionDelay  = index/3 + "s";
     myCard[index].classList.add('is-flipped');
 };
 
@@ -159,13 +200,31 @@ let timeFormating = (time, elementName,index) => {
 
     if (distance < 0) {
         element.innerText = "";
-        reveling(index);
+        reveled = index;
     } else
         element.innerText = countDown;
 };
-let challenge1TimerInterval;
-challenge1TimerInterval = setInterval(timeFormating, 1000,countDownDateChallenge1,"challenge1Timer",0);
-challenge1TimerInterval = setInterval(timeFormating, 1000,countDownDateChallenge2,"challenge2Timer",1);
+// let challenge1TimerInterval;
+setInterval(timeFormating, 1000,countDownDateChallenge1,"challenge1Timer",0);
+setInterval(timeFormating, 1000,countDownDateChallenge2,"challenge2Timer",1);
+setInterval(timeFormating, 1000,countDownDateChallenge3,"challenge3Timer",3);
+setInterval(timeFormating, 1000,countDownDateChallenge4,"challenge4Timer",4);
+setInterval(timeFormating, 1000,countDownDateChallenge5,"challenge5Timer",5);
+setInterval(timeFormating, 1000,countDownDateChallenge6,"challenge6Timer",6);
+setInterval(timeFormating, 1000,countDownDateChallenge7,"challenge7Timer",7);
+setInterval(timeFormating, 1000,countDownDateChallenge8,"challenge8Timer",8);
+setInterval(timeFormating, 1000,countDownDateChallenge9,"challenge9Timer",9);
+setInterval(timeFormating, 1000,countDownDateChallenge10,"challenge10Timer",10);
+setInterval(timeFormating, 1000,countDownDateChallenge11,"challenge11Timer",11);
+setInterval(timeFormating, 1000,countDownDateChallenge12,"challenge12Timer",12);
+setInterval(timeFormating, 1000,countDownDateChallenge13,"challenge13Timer",13);
+setInterval(timeFormating, 1000,countDownDateChallenge14,"challenge14Timer",14);
+setInterval(timeFormating, 1000,countDownDateChallenge15,"challenge15Timer",15);
+
+
+
+
+
 
 
 // myCard[0].addEventListener("click", function (e) {

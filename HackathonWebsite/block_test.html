@@ -10,16 +10,29 @@
 
     <title>test</title>
     <style>
-        body{
-            background-color: #F3F3F3;
+        :root {
+            --primary: #009495;
+            --secondary: #02e9bd;
+            --dark: #212121;
+            --light: #F3F3F3;
         }
+
+        body{
+            background-image: linear-gradient(var(--primary),var(--dark),var(--dark), var(--secondary));;
+            height: 10000px;
+
+        }
+
+
+
+
     </style>
     <link href="css/Challenges.css" rel="stylesheet">
 </head>
 
 
 <body>
-    <div class="card">
+    <!-- <div class="card">
 
         <div class="cardInner">
             <div class="cardFace cardFace--front">
@@ -29,19 +42,17 @@
             <div class="cardFace cardFace--back">
                 <div class="cardContent">
                     <div class="cardHeader">
-                        <!-- <img src="" alt="" class="pp"/> -->
                         <h3></h3>
                     </div>
                     <div class="cardBody">
                         <h3></h3>
                         <p></p>
-                        <!-- <button></button> -->
                     </div>
                 </div>
             </div>
         </div>
         
-    </div>
+    </div> -->
 </body>
 
 <script>

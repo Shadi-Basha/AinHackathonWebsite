@@ -1,5 +1,15 @@
+
+:root {
+    --Bprimary: #2c8d8d;
+    --Bmid:#009495;
+    --Bsecondary: #02e9bd;
+    --Bdark: #144747;
+    --BlightDark:#3c7272;
+    --Blight: #F3F3F3;
+}
+
 body{
-    background-color: black;
+    background-image: linear-gradient(var(--Bmid),var(--Bprimary),var(--Bdark),var(--Bdark),var(--BlightDark),var(--Bprimary), var(--Bsecondary));;
     /* overflow-x: hidden; */
 }
 
