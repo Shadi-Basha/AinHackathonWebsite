@@ -14,7 +14,7 @@ window.onscroll = (event) => {
     let scroll = window.pageYOffset;
     let width = window.innerWidth;
     let newScroll = scroll - 635;
-    console.log("Y : " + scroll);
+    // console.log("Y : " + scroll);
     // console.log("width: " + width);
     const body = document.getElementsByTagName('body')[0];
 
@@ -207,19 +207,19 @@ let timeFormating = (time, elementName,index) => {
 // let challenge1TimerInterval;
 setInterval(timeFormating, 1000,countDownDateChallenge1,"challenge1Timer",0);
 setInterval(timeFormating, 1000,countDownDateChallenge2,"challenge2Timer",1);
-setInterval(timeFormating, 1000,countDownDateChallenge3,"challenge3Timer",3);
-setInterval(timeFormating, 1000,countDownDateChallenge4,"challenge4Timer",4);
-setInterval(timeFormating, 1000,countDownDateChallenge5,"challenge5Timer",5);
-setInterval(timeFormating, 1000,countDownDateChallenge6,"challenge6Timer",6);
-setInterval(timeFormating, 1000,countDownDateChallenge7,"challenge7Timer",7);
-setInterval(timeFormating, 1000,countDownDateChallenge8,"challenge8Timer",8);
-setInterval(timeFormating, 1000,countDownDateChallenge9,"challenge9Timer",9);
-setInterval(timeFormating, 1000,countDownDateChallenge10,"challenge10Timer",10);
-setInterval(timeFormating, 1000,countDownDateChallenge11,"challenge11Timer",11);
-setInterval(timeFormating, 1000,countDownDateChallenge12,"challenge12Timer",12);
-setInterval(timeFormating, 1000,countDownDateChallenge13,"challenge13Timer",13);
-setInterval(timeFormating, 1000,countDownDateChallenge14,"challenge14Timer",14);
-setInterval(timeFormating, 1000,countDownDateChallenge15,"challenge15Timer",15);
+setInterval(timeFormating, 1000,countDownDateChallenge3,"challenge3Timer",2);
+setInterval(timeFormating, 1000,countDownDateChallenge4,"challenge4Timer",3);
+setInterval(timeFormating, 1000,countDownDateChallenge5,"challenge5Timer",4);
+setInterval(timeFormating, 1000,countDownDateChallenge6,"challenge6Timer",5);
+setInterval(timeFormating, 1000,countDownDateChallenge7,"challenge7Timer",6);
+setInterval(timeFormating, 1000,countDownDateChallenge8,"challenge8Timer",7);
+setInterval(timeFormating, 1000,countDownDateChallenge9,"challenge9Timer",8);
+setInterval(timeFormating, 1000,countDownDateChallenge10,"challenge10Timer",9);
+setInterval(timeFormating, 1000,countDownDateChallenge11,"challenge11Timer",10);
+setInterval(timeFormating, 1000,countDownDateChallenge12,"challenge12Timer",11);
+setInterval(timeFormating, 1000,countDownDateChallenge13,"challenge13Timer",12);
+setInterval(timeFormating, 1000,countDownDateChallenge14,"challenge14Timer",13);
+setInterval(timeFormating, 1000,countDownDateChallenge15,"challenge15Timer",14);
 
 
 
