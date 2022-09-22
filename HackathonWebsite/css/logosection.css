@@ -14,6 +14,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     width: 100%;
     margin: auto;
     padding: 15px 8px 0;
@@ -35,7 +36,7 @@ clip-path: circle(50.0% at 10% 50%);
     display: flex;
     height: 100%;
     max-width: 100%;
-    background:(255,255,255,0.1);
+    background: rgba(255,255,255,0.1);
     justify-content:center;
     align-items:center;
     overflow:hidden;
@@ -52,17 +53,18 @@ clip-path: circle(50.0% at 10% 50%);
     flex-direction: column;
     align-items: flex-end;
 }
-.logoPannel .flex2 .text{
+.logoPannel .text{
     flex-grow: 4;
     margin-right: end;
-    align-self:flex-start;
+    color: rgb(154, 41, 41);
+    position: static;
 }
 .logoPannel .text h2{
     font-size: 80px;
 }
 .logoPannel .logo{
     margin-right: -.5cm;
-    width: 100%;
+    width:100%;
 }
 .logoPannel p{
     padding-right: 10px;
@@ -71,14 +73,12 @@ clip-path: circle(50.0% at 10% 50%);
   .logoPannel{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: stretch;
-    column-gap: 40%;
+    column-gap: 30%;
     align-items: center;
-    flex-basis: auto;
     height: 100%;
     width:80%;
-  
   }
 
   .column{
@@ -89,3 +89,57 @@ clip-path: circle(50.0% at 10% 50%);
     order: 3;
   }
  
+  @media only screen and (max-width: 1473px)  {
+   
+    .logoPannel{
+        column-gap: 20%;
+      }
+      .logoPannel .logo {
+        margin-right: -.5cm;
+        width: 40%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .logoPannel .logo img {
+        margin-right: -.5cm;
+        width: 100%;
+        align-self: center;
+     
+    }
+    .logoPannel .text{
+      margin-left: -.5cm;
+      width: 40%;
+      overflow: hidden;
+   }
+   .logoPannel .text h2{
+    font-size: 55px;  
+ }
+}
+    
+    
+  
+  @media only screen and (max-width: 1035px) {
+    .logoPannel {
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+    }
+      .body2::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: white;
+        position: absolute;
+        z-index: -1;
+        clip-path: polygon(0 .5%, 100% 50%, 100% 100%, 0% 100%);
+          }
+          .logoPannel .text{
+            display: inline-flex;
+            flex-direction: column;
+            padding-top: 70px;
+            width: fit-content;
+            justify-content: center;
+            align-items: baseline;
+         }
+        }
