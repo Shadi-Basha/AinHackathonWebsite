@@ -1,145 +1,253 @@
 body{
-    background-image: linear-gradient(var(--Bmid),var(--Bprimary),var(--Bdark),var(--Bdark),var(--BlightDark),var(--Bprimary), var(--Bsecondary));;
+    /* background-image: linear-gradient(var(--Bmid),var(--Bprimary),var(--Bdark),var(--Bdark),var(--BlightDark),var(--Bprimary), var(--Bsecondary));; */
     /* overflow-x: hidden; */
-   
-    height: 100vh;
 }
-nav .logo{
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing:3px;
-    font-size: 32px;
+
+.Hcenter{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Vcenter{
+  display: flex;
+  align-items: center;
+}
+
+nav.logo{
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing:3px;
+  font-size: 32px;
 }
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    padding: 15px 8px 0;
+  background-color: lightcyan;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr; 
+
+  /* justify-content: center;
+  align-items: center; */
+  width: 100%;
+  margin: 0 auto 0;
+  padding: 10px 0 10px 0;
 }
-nav ul li{
-    display: inline-block;
-    margin: 0 25vh;
+nav div {
+  align-content: center;
+  text-align: center ;
+  margin-top: auto;
+  margin-bottom: auto;
 }
+
 .body2::after{
-content: "";
-width: 100%;
-height: 100%;
-background: white;
-position: absolute;
-z-index: -1;
-clip-path: circle(50.0% at 10% 50%);
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: absolute;
+  z-index: -1;
+  clip-path: circle(50.0% at 12% 50%);
 }
+
 .body2{
     display: flex;
-    height: 100%;
+    height: 100vh;
     max-width: 100%;
-    background: rgba(255,255,255,0.1);
+    /* background: rgba(255,255,255,0.1); */
     justify-content:center;
     align-items:center;
     overflow:hidden;
     border-radius:10px;
 
 }
+
 .Hackathon{
  letter-spacing:6px;
 }
-.flex2{
-    display: flex;
-    width: 100%;
-    height: 35%;
-    flex-direction: column;
-    align-items: flex-end;
-}
+
 .logoPannel .text{
     flex-grow: 4;
-    margin-right: end;
+    /* margin-right: end; */
+    width: 600px;
     color: rgb(154, 41, 41);
     position: static;
+    margin-left: 70px;
 }
+
 .logoPannel .text h2{
     font-size: 80px;
 }
+
 .logoPannel .logo{
-    margin-right: -.5cm;
-    width:100%;
+    /* margin-right: -.5cm; */
+    width:600px;
+    margin-left: 50px;
 }
+
 .logoPannel p{
     padding-right: 10px;
     border-right: 4px solid rgb(55, 85, 136);
 }
+
   .logoPannel{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: stretch;
-    column-gap: 30%;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-content: stretch; */
+    column-gap: 60px;
     align-items: center;
     height: 100%;
-    width:80%;
+    width:fit-content;
+    height: fit-content;
   }
 
-  .column{
-    align-self: flex-start;
-    order: 2;    
+  .logoImg{
+    width: 600px;
   }
-  .column1{
-    order: 3;
+
+  .infoTextBox{
+    margin-right: 60px;
   }
+
  
-  @media only screen and (max-width: 1473px)  {
+
+/* for footer */
+
+footer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr; 
+  width: 100%;
+  margin: 0 auto 0;
+  padding: 10px 0 10px 0;
+}
+
+footer div {
+  align-content: center;
+  text-align: center ;
+  margin-top: auto;
+  margin-bottom: auto;  
+}
+
+
+@media only screen and (max-width: 1380px)  {
    
-    .logoPannel{
-        column-gap: 20%;
-      }
-      .logoPannel .logo {
-        margin-right: -.5cm;
-        width: 40%;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-     }
-     .logoPannel .logo img {
-        margin-right: -.5cm;
-        width: 100%;
-        align-self: center;
-     
-    }
-    .logoPannel .text{
-      margin-left: -.5cm;
-      width: 40%;
-      overflow: hidden;
-   }
-   .logoPannel .text h2{
+  .logoPannel .text{
+    width: 450px;
+    margin-left: 0;
+  }
+
+  .body2::after{
+    clip-path: circle(50.0% at 80px 50%);
+  }
+
+  .logoImg{
+    width: 450px;
+  }
+  
+  .infoTextBox{
+    /* margin-right: 50px; */
+    /* width: 400px; */
+  }
+
+  .logoPannel{
+      column-gap: 100px;
+  }
+
+  .logoPannel .logo {
+    width:450px;
+    margin-left: 0;
+    /* margin-left: 50px; */
+  }
+    /* .logoPannel .logo img {
+      margin-right: -.5cm;
+      width: 100%;
+      align-self: center;
+    
+    } */
+  /* .logoPannel .text{
+    margin-left: -.5cm;
+    width: 40%;
+    overflow: hidden;
+    } */
+
+  .logoPannel .text h2{
     font-size: 55px;  
- }
+  }
 }
     
-    
-  
-  @media only screen and (max-width: 1035px) {
-    .logoPannel {
-        display: flex;
-        flex-direction: column;
-        row-gap: 60px;
+@media only screen and (max-width: 1150px)  {
+  .body2::after{
+    clip-path: circle(50.0% at 70px 50%);
     }
-      .body2::after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: white;
-        position: absolute;
-        z-index: -1;
-        clip-path: polygon(0 .5%, 100% 50%, 100% 100%, 0% 100%);
-          }
-          .logoPannel .text{
-            display: inline-flex;
-            flex-direction: column;
-            padding-top: 70px;
-            width: fit-content;
-            justify-content: center;
-            align-items: baseline;
-         }
-        }
+}  
+  
+@media only screen and (max-width: 1050px) {
+  
+  .body2::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(0 .5%, 100% 50%, 100% 100%, 0% 100%);
+  }
+
+  .logoPannel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    width: 360px;
+  }
+
+  .logoPannel .text{
+    /* display: inline-flex;
+    flex-direction: column;
+    padding-top: 70px;
+    width: fit-content;
+    justify-content: center;
+    align-items: baseline; */
+    width: 350px;
+  }
+
+  .logoImg{
+    width: 350px;
+  }
+
+  .logoPannel .logo {
+    width:350px;
+    margin-left: 0;
+    /* margin-left: 50px; */
+  }
+
+  .infoTextBox{
+    width: 340px;
+    margin-right: 10px;
+  }
+
+  .logoPannel .text h2{
+    font-size: 50px;  
+  }
+
+
+  .goUp{ 
+    grid-area: goUp;
+  }
+  
+  .socials{
+    grid-area: socials;
+  }
+
+  .CR{
+    grid-area: CR;
+
+  }
+
+  footer{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "goUp socials"
+    "CR CR"
+    ;
+  }
+}

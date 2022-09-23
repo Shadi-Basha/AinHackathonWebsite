@@ -170,21 +170,30 @@ window.onscroll = (event) => {
 // };
 
 
-const countDownDateChallenge1 = new Date("sep 21, 2022 18:48:00").getTime();
-const countDownDateChallenge2 = new Date("sep 21, 2022 23:50:00").getTime();
-const countDownDateChallenge3 = new Date("sep 22, 2022 23:50:00").getTime();
-const countDownDateChallenge4 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge5 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge6 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge7 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge8 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge9 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge10 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge11 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge12 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge13 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge14 = new Date("sep 19, 2022 18:50:00").getTime();
-const countDownDateChallenge15 = new Date("sep 19, 2022 18:50:00").getTime();
+let releaseYear = 2022;
+let releaseDay = 4;
+let releaseMonth = "oct";
+let releaseHours = "00:";
+let releaseMinutes = "00:";
+let releaseSeconds = "00";
+  
+const countDownDateChallenge1 = new Date(releaseMonth + " " +releaseDay + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge2 = new Date(releaseMonth + " " +(releaseDay) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge3 = new Date(releaseMonth + " " +(releaseDay+1) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge4 = new Date(releaseMonth + " " +(releaseDay+1) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge5 = new Date(releaseMonth + " " +(releaseDay+2) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge6 = new Date(releaseMonth + " " +(releaseDay+2) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge7 = new Date(releaseMonth + " " +(releaseDay+3) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge8 = new Date(releaseMonth + " " +(releaseDay+3) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge9 = new Date(releaseMonth + " " +(releaseDay+4) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge10 = new Date(releaseMonth + " " +(releaseDay+4) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge11 = new Date(releaseMonth + " " +(releaseDay+5) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge12 = new Date(releaseMonth + " " +(releaseDay+5) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge13 = new Date(releaseMonth + " " +(releaseDay+6) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge14 = new Date(releaseMonth + " " +(releaseDay+6) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+const countDownDateChallenge15 = new Date(releaseMonth + " " +(releaseDay+7) + ", " + releaseYear + " " + releaseHours + releaseMinutes + releaseSeconds).getTime();
+
+
 
 
 

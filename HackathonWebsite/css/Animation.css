@@ -13,6 +13,10 @@ body{
     /* overflow-x: hidden; */
 }
 
+.overFlow{
+    overflow: hidden;
+}
+
 .mobileTextGrid{
     display: none;
 }
@@ -253,6 +257,8 @@ body{
 
     .getReadyBox{
         height: 400px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
 
     .mobileTextSize{
@@ -265,7 +271,8 @@ body{
         margin-left: auto;   
         margin-right: auto;
         width: 100%;
-        height: inherit;
+        height: fit-content;
+        overflow: hidden;
     }
 
     .imageShowContainer{
@@ -339,6 +346,6 @@ body{
 
     .underText{
         margin-top: 20px;
-        font-size: 30px;    
+        font-size: 20px;    
     }
 }
