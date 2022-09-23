@@ -13,6 +13,14 @@
     margin-top: 50px;
 }
 
+.targetedPeople{
+    opacity: 0.5;
+    font-size: 15px;
+}
+
+.intro{
+    font-size: 17px;
+}
 
 @media only screen and (max-width: 770px){
     .headerText{
