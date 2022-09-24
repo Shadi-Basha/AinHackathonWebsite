@@ -113,7 +113,7 @@ window.onscroll = (event) => {
                     img4[0].style.transform = "matrix(" + (1 + 600 * 0.00015) + ",0,0," + (1 + 600 * 0.00015) + "," + (600 * .40 - 100) + "," + (0.92 * 600 - 1020) + ")";
                 img4[0].lastElementChild.classList.add("changeOpacityNormal");
             }
-            if (newScroll > 1000) {
+            if (newScroll > 1200) {
                 if (width > 1200)
                     readyAR[0].classList.add("changeOpacityNormal");
             }
@@ -125,7 +125,17 @@ window.onscroll = (event) => {
             //     body.style.backgroundColor = 'black';
             // }
 
-            if (scroll > 1900) {
+            if (scroll > 2400 && width > 1200) {
+                if (reveled != pastI) {
+                    // console.log("this is current index " +reveled);
+                    for (let i = 0; i <= reveled; i++) {
+                        reveling(i);
+                    }
+                    pastI = reveled;
+                }
+
+            }
+            else if (scroll > 2000 && width < 1200) {
                 if (reveled != pastI) {
                     // console.log("this is current index " +reveled);
                     for (let i = 0; i <= reveled; i++) {
@@ -139,7 +149,7 @@ window.onscroll = (event) => {
         }
     }
     else {
-        if (mobileScroll > 0 && mobileScroll < 740) {
+        if (mobileScroll > -200 && mobileScroll < 740) {
             mobileText[0].children[0].children[0].children[0].classList.add("changeOpacityNormal");
             mobileText[0].children[0].children[1].children[0].classList.add("changeOpacitySlow");
             mobileText[0].children[0].children[2].children[0].classList.add("changeOpacityFast");
@@ -198,7 +208,7 @@ const countDownDateChallenge15 = new Date(releaseMonth + " " +(releaseDay+7) + "
 
 
 const reveling = (index) => {
-    myCard[index].style.transitionDelay = index / 3 + "s";
+    myCard[index].style.transitionDelay = index / 2.5 + "s";
     myCard[index].classList.add('is-flipped');
 };
 
