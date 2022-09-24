@@ -13,11 +13,12 @@ body{
   align-items: center;
 }
 
-nav.logo{
+nav div .logo{
   font-weight: 700;
   text-decoration: none;
   letter-spacing:3px;
   font-size: 32px;
+  height: 30px;
 }
 nav {
   background-color: lightcyan;
@@ -61,14 +62,16 @@ nav div {
 }
 
 .Hackathon{
- letter-spacing:6px;
+  letter-spacing:6px;
+  margin-right: 45px;
+  width: 560px;
 }
 
 .logoPannel .text{
     flex-grow: 4;
     /* margin-right: end; */
     width: 600px;
-    color: rgb(154, 41, 41);
+    color: #0a1b2d;
     position: static;
     margin-left: 70px;
 }
@@ -173,16 +176,41 @@ footer div {
   .logoPannel .text h2{
     font-size: 55px;  
   }
+
+  .Hackathon{
+    letter-spacing:6px;
+    margin-right: 45px;
+    width: 450px;
+  }
+  
 }
     
 @media only screen and (max-width: 1150px)  {
   .body2::after{
     clip-path: circle(50.0% at 70px 50%);
     }
+
+  .Hackathon{
+    letter-spacing:6px;
+    margin-right: 20px;
+    width: 450px;
+  }
+
+  .infoTextBox{
+    margin-right: 30px;
+  }
 }  
   
 @media only screen and (max-width: 1050px) {
   
+
+  .Hackathon{
+    letter-spacing:6px;
+    margin-right: 0;
+    width: 360px;
+  }
+
+
   .body2::after{
     content: "";
     width: 100%;
@@ -196,7 +224,7 @@ footer div {
   .logoPannel {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
+    row-gap: 40px;
     width: 360px;
   }
 
